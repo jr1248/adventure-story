@@ -4,7 +4,7 @@ def start():
     answer=input("yes or no?\n")
     if answer=="yes":
         print("Great, but I didn't get your name. What is it?")
-        your_name=input(" ")
+        your_name=input("")
         print("Nice to meet you" + " " + your_name)
         chapter1()
     else:
@@ -45,7 +45,7 @@ def chapter2():
     choice=input("1 or 2\n")
     if choice=="1":
         print("while cleaning your first customer walks in")
-        #call ch3version1 
+        chapter3_v1()
 
     else:
         print("You wakeup from your nap to find out the store has been robbed. Oh No! What will you do?")
@@ -71,5 +71,37 @@ def chapter2():
         else:
             print("I'll find the theif and return the money before anyone realizes")
             #call ch3version2
+def chapter3_v1():
+    print("Me: Hello, welcome to Lisa's bakery. How may I help you?")
+    print("Customer: Can I get a bluberry muffin and a small coffee?")
+    print("Me: one bluberry muffin coming right up?")
+    coffee = """Looks like your out of coffee. What will you do? Select 1 or 2
+    1. Make more
+    2.Inform the customer you have no more coffee"""
+    print(coffee)
+    coffee_choice=input("1 or 2\n")
+    if coffee_choice=="1":
+        print("The coffee machine is broken. What will you do?")
+        broken_coffee="""Select 1 or 2
+        1.Fix the coffee machine
+        2.Explain to the customer"""
+        print(broken_coffee)
+        broke_cafe=input("1 or 2\n")
+        if broke_cafe=="1":
+            print("Congrats!! You where able to fix it and the customer went on their way. You've made your first sale!!!")
+            #callch4v1
+        else:
+            print("You expain to the customer and the offer to fix the coffee machine. Will you let them fix it? yes or no?")
+            fix=input("yes or no\n")
+            if fix=="yes":
+                print("You notice the customer has a strange accent when they speak")
+                #callch4v2        
+            else:
+                print("The customer said fine and walked out with their muffin")
+                #callch4v3
+    else:
+        print("The customer is annoyed and ask how can you be out of coffee so early. You apologize, but they leave annoyed")
+            #callch4v3
+
 #start game
 start()
