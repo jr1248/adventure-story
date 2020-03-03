@@ -48,7 +48,7 @@ def chapter2():
         chapter3_v1()
 
     else:
-        print("You wakeup from your nap to find out the store has been robbed. Oh No! What will you do?")
+        print("You wake up from your nap to find out the store has been robbed. Oh No! What will you do?")
         robbed= """ Select 1 or 2
         1. Call Lisa and apoligize
         2.Don't tell Lisa and find who stole the money before she gets back
@@ -70,7 +70,7 @@ def chapter2():
                 start()
         else:
             print("I'll find the theif and return the money before anyone realizes")
-            #call ch3version2
+            chapter3_v2()
 def chapter3_v1():
     print("Me: Hello, welcome to Lisa's bakery. How may I help you?")
     print("Customer: Can I get a bluberry muffin and a small coffee?")
@@ -102,6 +102,23 @@ def chapter3_v1():
     else:
         print("The customer is annoyed and ask how can you be out of coffee so early. You apologize, but they leave annoyed")
             #callch4v3
-
+def chapter3_v2():
+    print("Your first customer walks in while your thinking of ways to capture the theif")
+    wwyd="""Select 1,2 or 3
+    1. Tell the customer to wait and look at the cameras 
+    2. Tell the customer to wait and search for clues 
+    3. Attend to the customer and wait till the end of the day to search for clues
+    """
+    print(wwyd)
+    search=input("1,2 or 3\n")
+    if search == "1":
+        print("test")
+        #call adventure mode 1
+    if search == "2":
+        print("test2")
+        #call adventure mode 2
+    if search == "3":
+        print("test3")
+        #call adventure mode 3
 #start game
 start()
